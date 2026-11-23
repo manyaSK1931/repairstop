@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book roadside help – RepairStop</title>
+<link rel="icon" href="/assets/logo.png">
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/app.css">
+</head>
+<body class="app" >
+<div id="chrome-nav"></div>
+<main>
+<div class="container"><div class="stack">
+<div><div class="eyebrow">Book roadside assistance</div><h1 style="font-size:34px">Stuck on the road? A mechanic comes to you.</h1><p class="lead">No payment until a mechanic accepts. Price is shown before work starts.</p></div>
+<div id="msg" class="hidden"></div>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr));align-items:start">
+<div class="card stack">
+<div class="field"><label for="loc">Where is your vehicle?</label><div class="row" style="flex-wrap:wrap"><input id="loc" placeholder="Type a landmark or address" style="flex:1 1 220px;min-height:48px;border:1px solid var(--line-strong);border-radius:10px;padding:0 14px;font:400 16px 'DM Sans'"><button class="btn" id="useLoc" type="button">Use my location</button></div></div>
+<div class="label">What happened?</div><div class="row" id="chips" role="group" aria-label="Service"></div>
+<button class="btn primary block" id="findBtn" type="button">Find mechanics near me</button>
+<div class="hint">Estimated arrival times are based on distance and are not a guarantee.</div>
+</div>
+<div class="card stack" style="background:var(--sand);border-color:var(--sand)">
+<div id="mapBox"></div>
+<div class="label">Nearest mechanics</div>
+<div id="mechList" class="stack"><div class="muted small" style="background:#fff;border-radius:12px;padding:14px 16px">Enter your location and choose a service to see mechanics near you.</div></div>
+<div id="confirmBox" class="stack hidden" style="background:#fff;border-radius:12px;padding:16px">
+<div id="selSummary"></div>
+<div class="field"><label for="vehicle">Vehicle (make, model, number)</label><input id="vehicle" maxlength="100" placeholder="e.g. Swift KA01 AB 1234"></div>
+<div class="field"><label for="notes">Anything the mechanic should know? (optional)</label><textarea id="notes" maxlength="500"></textarea></div>
+<button class="btn primary block" id="confirmBtn" type="button">Request this mechanic</button>
+<button class="btn block" id="autoBtn" type="button">Let nearby mechanics accept instead</button>
+</div></div></div></div></div>
+</main>
+<div id="chrome-foot"></div>
+<script src="/js/common.js"></script>
+<script src="/js/book.js"></script>
+</body>
+</html>

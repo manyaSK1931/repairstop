@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin dashboard – RepairStop</title>
+<link rel="icon" href="/assets/logo.png">
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/app.css">
+</head>
+<body class="app" >
+<div id="chrome-nav"></div>
+<main>
+<div class="container" style="max-width:1280px"><div class="stack" style="gap:24px">
+<div class="row between"><div><div class="eyebrow">Administrator</div><h1 style="font-size:30px">RepairStop admin</h1><div class="muted" id="who"></div></div><button class="btn" id="logout" type="button">Log out</button></div>
+<div id="msg" class="hidden"></div>
+<div class="tabs" role="tablist">
+<button class="tab" data-tab="overview">Overview</button><button class="tab" data-tab="verifications">Verifications<span class="count hidden" id="pendCount"></span></button><button class="tab" data-tab="mechanics">Mechanics</button><button class="tab" data-tab="customers">Customers</button><button class="tab" data-tab="bookings">Bookings</button><button class="tab" data-tab="services">Services</button><button class="tab" data-tab="areas">Coverage</button><button class="tab" data-tab="payments">Payments</button><button class="tab" data-tab="reviews">Reviews</button></div>
+<section data-panel="overview"><div id="statsBox" class="grid cols-4"></div></section>
+<section data-panel="verifications" class="stack"><div id="verifyList" class="stack"></div></section>
+<section data-panel="mechanics"><div id="mechTable"></div></section>
+<section data-panel="customers"><div id="custTable"></div></section>
+<section data-panel="bookings"><div id="bookTable"></div></section>
+<section data-panel="services" class="stack"><div id="svcTable"></div>
+<form id="svcForm" class="card row" novalidate style="align-items:flex-end"><div class="field" style="flex:1 1 180px"><label for="sname">New service name</label><input id="sname" name="name"></div><div class="field" style="flex:2 1 220px"><label for="sdesc">Description</label><input id="sdesc" name="description"></div><div class="field" style="width:140px"><label for="sprice">Base price (₹)</label><input id="sprice" name="basePrice" type="number" min="0"></div><button class="btn primary" type="submit">Add service</button></form></section>
+<section data-panel="areas" class="stack"><div id="areaBox" class="row"></div>
+<form id="areaForm" class="card row" novalidate style="align-items:flex-end;max-width:480px"><div class="field" style="flex:1 1 200px"><label for="acity">Add a city</label><input id="acity" name="city"></div><button class="btn primary" type="submit">Add city</button></form></section>
+<section data-panel="payments"><div id="payTable"></div></section>
+<section data-panel="reviews"><div id="revTable"></div></section>
+</div></div>
+</main>
+<div id="chrome-foot"></div>
+<script src="/js/common.js"></script>
+<script src="/js/admin.js"></script>
+</body>
+</html>

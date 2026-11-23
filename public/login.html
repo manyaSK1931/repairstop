@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Log in – RepairStop</title>
+<link rel="icon" href="/assets/logo.png">
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/app.css">
+</head>
+<body class="app" data-page="login">
+<div id="chrome-nav"></div>
+<main>
+<div class="container narrow"><div class="card stack">
+<div><div class="eyebrow">Welcome back</div><h1 style="font-size:28px">Log in to RepairStop</h1></div>
+<div id="msg" class="hidden"></div>
+<form id="loginForm" class="stack" novalidate>
+<div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required><div class="err"></div></div>
+<div class="field"><label for="password">Password</label><div class="pw"><input id="password" name="password" type="password" autocomplete="current-password" required><button type="button" aria-label="Show or hide password">Show</button></div><div class="err"></div></div>
+<div class="row between"><label class="check"><input type="checkbox" id="remember" name="remember"> Remember me</label><a href="/forgot-password" style="color:var(--orange);font-weight:500">Forgot password?</a></div>
+<button class="btn primary block" type="submit">Log in</button>
+</form>
+<div class="muted" style="text-align:center">New to RepairStop? <a href="/register" style="color:var(--orange);font-weight:700">Create an account</a><br><span class="small">Mechanic or garage owner? <a href="/partner" style="color:var(--orange)">Join as a partner</a></span></div>
+</div></div>
+</main>
+<div id="chrome-foot"></div>
+<script src="/js/common.js"></script>
+<script src="/js/auth.js?v=2"></script>
+</body>
+</html>
